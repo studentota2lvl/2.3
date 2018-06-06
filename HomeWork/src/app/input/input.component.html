@@ -1,7 +1,7 @@
 <input
   type="text"
   class="form-control"
-  (change)="onInputReady()"
+  (input)="onInputReady()"
   [(ngModel)]="numberData"
   [placeholder]="variable"
   [appValidate]="numberData"
