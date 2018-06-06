@@ -1,0 +1,38 @@
+
+<div class="form-group">
+  <div class="col-sm-6">
+    <app-input
+      [numberData]="firstNumber"
+      [variable]="firstNumberPlaceholder"
+      (inputEvent)="getFirstInputVal($event)">
+    </app-input>
+    <hr>
+    <div>
+      <select
+        class="form-control"
+        (change)="onSelectedVal($event.target.value)">
+        <option
+          *ngFor="let operator of operators"
+          value="{{operator}}">{{operator}}</option>
+      </select>
+    </div>
+    <hr>
+    <app-input
+      [numberData]="secondNumber"
+      [variable]="secondNumberPlaceholder"
+      (inputEvent)="getSecondInputVal($event)">
+    </app-input>
+    <hr>
+    <div class="col-xs-6 col-md-4">
+      <button
+        class="btn btn-primary"
+        (click)="onCalculateButtonClick()">Calculate</button>
+    </div>
+    <app-result
+      [hidden] = "resultView"
+      [resultData]="result"
+      (clearBtnClick)="resultHidden()">
+    </app-result>
+  </div>
+
+</div>
