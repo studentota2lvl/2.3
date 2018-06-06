@@ -5,28 +5,5 @@ import {Component} from '@angular/core';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
-  firstNumberPlaceholder = 'first number';
-  secondNumberPlaceholder = 'second number';
-  firstNumber: number;
-  secondNumber: number;
-  result: number;
+export class AppComponent {}
 
-  onFirstInputEvent($event) {
-    this.firstNumber = $event;
-  }
-
-  onSecondInputEvent($event) {
-    this.secondNumber = $event;
-  }
-
-  onCalculateButtonClick () {
-    this.result = (this.firstNumber) + (this.secondNumber);
-    this.inputEraser();
-  }
-
-  inputEraser() {
-    this.firstNumber = undefined;
-    this.secondNumber = undefined;
-  }
-}
